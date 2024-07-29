@@ -20,7 +20,11 @@
             background-clip: text;
             text-align: center;
             padding-top: 100px;
-            animation: glitch 1s infinite alternate-reverse;
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+        body.loaded {
+            opacity: 1;
         }
         .background-image {
             position: fixed;
@@ -30,6 +34,13 @@
             height: 100%;
             z-index: -1;
             object-fit: cover;
+        }
+        .content {
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
+        }
+        .content.visible {
+            opacity: 1;
         }
         h1 {
             color: transparent;
@@ -52,7 +63,6 @@
         ul li a {
             text-decoration: none;
             color: #007bff;
-            font-weight: bold;
         }
         ul li a:hover {
             color: #0056b3;
@@ -90,18 +100,42 @@
 </head>
 <body>
     <img draggable="false" src="https://raw.githubusercontent.com/eq44/eq44.github.io/main/windows_xp.jpg" alt="Rich Presence User Interface" class="background-image">
-    <div class="container">
+    <div class="container content">
         <button id="refresh-btn" style="display: none;" onclick="location.reload()">Back</button>
     </div>
-    <img src="https://i.ibb.co/ccMv0n4/6a3949d4ef06a3037680d0c9fd463787.webp" alt="Profile Image" class="profile-img">
-    <h1 id="heading"><span style="font-family: 'Courier New', monospace; color: #8ffcb0;">ABOLHB</span></h1>
-    <p id="about"><span style="font-family: 'Courier New', monospace; color: #000000;">Welcome to my about</span></p>
-    <p id="connect"><span style="font-family: 'Courier New', monospace; color: #000000;">You can connect with me on social media</span></p>
-    <ul id="social-links">
+    <img src="https://i.ibb.co/ccMv0n4/6a3949d4ef06a3037680d0c9fd463787.webp" alt="Profile Image" class="profile-img content">
+    <h1 id="heading" class="content"><span style="font-family: 'Courier New', monospace; color: #8ffcb0;" id="user-ip">ABOLHB</span></h1>
+    <p id="about" class="content"><span style="font-family: 'Courier New', monospace; color: #000000;">Welcome to my about</span></p>
+    <p id="connect" class="content"><span style="font-family: 'Courier New', monospace; color: #000000;">You can connect with me on social media</span></p>
+    <ul id="social-links" class="content">
         <li id="discord-link"><a href="https://discord.com/users/593921110832316429">Discord</a></li>
         <li id="youtube-link"><a href="https://www.youtube.com/@ABOLHB">Youtube</a></li>
         <li id="instagram-link"><a href="https://www.instagram.com/lhwbe">Instagram</a></li>
         <li id="github-link"><a href="https://github.com/MasonGroup">Github</a></li>
     </ul>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('loaded');
+
+            fetch('https://api.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    const ipText = data.ip;
+                    typeWriter(ipText);
+                })
+                .catch(error => console.error('Error fetching IP:', error));
+        });
+
+        function typeWriter(ipText, i = 0) {
+            if (i < ipText.length) {
+                document.title = ipText.substring(0, i + 1);
+                setTimeout(() => typeWriter(ipText, i + 1), 5);
+            } else {
+                document.querySelectorAll('.content').forEach(element => {
+                    element.classList.add('visible');
+                });
+            }
+        }
+    </script>
 </body>
 </html>
