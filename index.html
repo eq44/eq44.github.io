@@ -10,9 +10,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>desktop-6rf4n6b\abolhb</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@400;700&family=Poppins:wght@400;600&display=swap">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             color: transparent; 
@@ -43,14 +44,19 @@
             opacity: 1;
         }
         h1 {
-            color: transparent;
-            font-size: 36px;
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #8ffcb0;
+            background: linear-gradient(45deg, #8ffcb0, #4babd8);
             -webkit-background-clip: text;
             background-clip: text;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         p {
-            line-height: 1.6;
-            font-size: 20px;
+            line-height: 1.8;
+            font-size: 22px;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
         }
         ul {
             list-style-type: none;
@@ -58,14 +64,19 @@
             text-align: center;
         }
         ul li {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         ul li a {
             text-decoration: none;
             color: #007bff;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            transition: color 0.3s, text-shadow 0.3s;
         }
         ul li a:hover {
-            color: #0056b3;
+            color: #007bff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
         .profile-img {
             display: block;
@@ -75,16 +86,18 @@
             height: 150px;
             object-fit: cover;
             border: 5px solid #4babd8;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
         }
         button {
             background-color: #000000;
             color: #adadad;
             border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 5px;
+            padding: 12px 24px;
+            font-size: 18px;
+            border-radius: 8px;
             cursor: pointer;
-            box-shadow: 0 0 10px #adadad;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            font-family: 'Roboto', sans-serif;
         }
         button:hover {
             background-color: #222222;
@@ -104,9 +117,9 @@
         <button id="refresh-btn" style="display: none;" onclick="location.reload()">Back</button>
     </div>
     <img src="https://i.ibb.co/ccMv0n4/6a3949d4ef06a3037680d0c9fd463787.webp" alt="Profile Image" class="profile-img content">
-    <h1 id="heading" class="content"><span style="font-family: 'Courier New', monospace; color: #8ffcb0;" id="user-ip">ABOLHB</span></h1>
-    <p id="about" class="content"><span style="font-family: 'Courier New', monospace; color: #000000;">Welcome to my about</span></p>
-    <p id="connect" class="content"><span style="font-family: 'Courier New', monospace; color: #000000;">You can connect with me on social media</span></p>
+    <h1 id="heading" class="content"><span id="user-ip">ABOLHB</span></h1>
+    <p id="about" class="content">Welcome to my about</p>
+    <p id="connect" class="content">You can connect with me on social media</p>
     <ul id="social-links" class="content">
         <li id="discord-link"><a href="https://discord.com/users/593921110832316429">Discord</a></li>
         <li id="youtube-link"><a href="https://www.youtube.com/@ABOLHB">Youtube</a></li>
