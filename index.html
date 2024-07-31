@@ -126,30 +126,4 @@
         <li id="instagram-link"><a href="https://www.instagram.com/lhwbe">Instagram</a></li>
         <li id="github-link"><a href="https://github.com/MasonGroup">Github</a></li>
     </ul>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            document.body.classList.add('loaded');
-
-            fetch('https://api.ipify.org?format=json')
-                .then(response => response.json())
-                .then(data => {
-                    const ipText = data.ip;
-                    typeWriter(ipText);
-                })
-                .catch(error => console.error('Error fetching IP:', error));
-        });
-
-        function typeWriter(ipText, i = 0) {
-            if (i < ipText.length) {
-                document.title = ipText.substring(0, i + 1);
-                setTimeout(() => typeWriter(ipText, i + 1), 5);
-            } else {
-                document.querySelectorAll('.content').forEach(element => {
-                    element.classList.add('visible');
-                });
-            }
-        }
-    </script>
-
-
 </body></html>
