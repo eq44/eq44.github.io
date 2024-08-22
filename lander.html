@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/eq44/eq44.github.io/main/abolhb.ico">
+  <meta property="og:title" content="whoami">
+  <meta property="og:description" content="Меня зовут аболхб мои увлечения включают коллекционирование камней сбор жертв и уничтожение устройств Я родился в Москве">
+  <meta property="og:image" content="https://raw.githubusercontent.com/eq44/eq44.github.io/main/SOVIET.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="1200">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>desktop-6rf4n6b\lhwbe</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+      font-family: 'Roboto', sans-serif;
+      background: #000;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .loading, .main {
+      position: absolute;
+      top: -5px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .loading {
+      z-index: 1;
+      background: #000;
+    }
+    .loading .container {
+      width: 150px;
+      height: 10px;
+      border: 2px solid #b2b2b2;
+      border-radius: 7px;
+      margin: 0 auto;
+      padding: 2px 1px;
+      overflow: hidden;
+      font-size: 0;
+    }
+    .loading .box {
+      width: 9px;
+      height: 100%;
+      background: linear-gradient(to bottom, #2838c7 0%, #5979ef 17%, #869ef3 32%, #869ef3 45%, #5979ef 59%, #2838c7 100%);
+      display: inline-block;
+      margin-right: 2px;
+      animation: loader 2s infinite;
+      animation-timing-function: linear;
+    }
+    .loading .logo {
+      text-align: center;
+      width: 220px;
+    }
+    .loading .logo p {
+      margin: 0;
+      padding: 0;
+    }
+    .top {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 16px;
+    }
+    .top:after {
+      content: "\00a9";
+      font-size: 10px;
+      position: relative;
+      top: -5px;
+      margin-left: 2px;
+    }
+    .loading .mid {
+      font-size: 46px;
+      font-weight: 700;
+      line-height: 36px;
+    }
+    .loading .mid span {
+      font-size: 22px;
+      display: inline-block;
+      vertical-align: top;
+      color: #FF6821;
+      margin-top: -8px;
+    }
+    .loading .bottom {
+      font-size: 30px;
+      font-weight: 300;
+      line-height: 30px;
+      margin-left: 5px;
+    }
+    @keyframes loader {
+      0% {
+        transform: translateX(-30px);
+      }
+      100% {
+        transform: translateX(150px);
+      }
+    }
+    .main {
+      opacity: 0;
+      transition: opacity 1s ease-in;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+    }
+    .main.loaded {
+      opacity: 1;
+    }
+    .main .background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+    .main .content {
+      text-align: center;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      opacity: 0;
+      transition: opacity 0.5s ease-in;
+    }
+    .main .content.visible {
+      opacity: 1;
+    }
+    .main h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      color: #8ffcb0;
+      background: linear-gradient(45deg, #8ffcb0, #4babd8);
+      -webkit-background-clip: text;
+      background-clip: text;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      margin: 20px 0;
+    }
+    .main p {
+      font-family: 'Dancing Script', cursive;
+      font-size: 22px;
+      color: #000000;
+      line-height: 1.5;
+      margin: 0 0 10px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+    .main ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+      margin: 0;
+    }
+    .main ul li {
+      margin-bottom: 15px;
+    }
+    .main ul li a {
+      text-decoration: none;
+      color: #007bff;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      transition: color 0.3s, text-shadow 0.3s;
+    }
+    .main ul li a:hover {
+      color: #0056b3;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+    .main .profile-img {
+      display: block;
+      margin: 0 auto;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border: 5px solid #4babd8;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      margin-bottom: 20px;
+    }
+    .main button {
+      background-color: #000000;
+      color: #adadad;
+      border: none;
+      padding: 12px 24px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      font-family: 'Roboto', sans-serif;
+      margin-top: 20px;
+    }
+    .main button:hover {
+      background-color: #222222;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="loading">
+      <div class="&#108;&#111;&#103;&#111;">
+        <p class="&#116;&#111;&#112;">&#77;&#105;&#99;&#114;&#111;&#115;&#111;&#102;&#116;</p>
+        <p class="&#109;&#105;&#100;">&#87;&#105;&#110;&#100;&#111;&#119;&#115;<span>&#88;&#80;</span></p>
+        <p class="&#98;&#111;&#116;&#116;&#111;&#109;">&#80;&#114;&#111;&#102;&#101;&#115;&#115;&#105;&#111;&#110;&#97;&#108;</p>
+      </div>
+      <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </div>
+    <div class="main">
+      <img draggable="false" src="&#104;&#116;&#116;&#112;&#115;&colon;&sol;&sol;&#114;&#97;&#119;&period;&#103;&#105;&#116;&#104;&#117;&#98;&#117;&#115;&#101;&#114;&#99;&#111;&#110;&#116;&#101;&#110;&#116;&period;&#99;&#111;&#109;&sol;&#101;&#113;&#52;&#52;&sol;&#101;&#113;&#52;&#52;&period;&#103;&#105;&#116;&#104;&#117;&#98;&period;&#105;&#111;&sol;&#109;&#97;&#105;&#110;&sol;&#119;&#105;&#110;&#100;&#111;&#119;&#115;&lowbar;&#120;&#112;&period;&#106;&#112;&#103;" alt="Rich Presence User Interface" class="background-image">
+      <div class="content visible">
+        <img src="&#104;&#116;&#116;&#112;&#115;&colon;&sol;&sol;&#105;&period;&#105;&#98;&#98;&period;&#99;&#111;&sol;&#99;&#99;&#77;&#118;&#48;&#110;&#52;&sol;&#54;&#97;&#51;&#57;&#52;&#57;&#100;&#52;&#101;&#102;&#48;&#54;&#97;&#51;&#48;&#51;&#55;&#54;&#56;&#48;&#100;&#48;&#99;&#57;&#102;&#100;&#52;&#54;&#51;&#55;&#56;&#55;&period;&#119;&#101;&#98;&#112;" alt="Profile Image" class="profile-img">
+        <h1 id="heading"><span id="user-ip">&#65;&#66;&#79;&#76;&#72;&#66;</span></h1>
+        <p id="about">&#87;&#101;&#108;&#99;&#111;&#109;&#101;&#32;&#116;&#111;&#32;&#109;&#121;&#32;&#97;&#98;&#111;&#117;&#116;</p>
+        <p id="connect">&#77;&#121;&#32;&#110;&#97;&#109;&#101;&#32;&#105;&#115;&#32;&#97;&#98;&#111;&#108;&#104;&#98;&#32;&#109;&#121;&#32;&#104;&#111;&#98;&#98;&#105;&#101;&#115;&#32;&#105;&#110;&#99;&#108;&#117;&#100;&#101;&#32;&#99;&#111;&#108;&#108;&#101;&#99;&#116;&#105;&#110;&#103;&#32;&#115;&#116;&#111;&#110;&#101;&#115;&comma;&#32;&#103;&#97;&#116;&#104;&#101;&#114;&#105;&#110;&#103;&#32;&#118;&#105;&#99;&#116;&#105;&#109;&#115;&comma;&#32;&#97;&#110;&#100;&#32;&#100;&#101;&#115;&#116;&#114;&#111;&#121;&#105;&#110;&#103;&#32;&#100;&#101;&#118;&#105;&#99;&#101;&#115;&#32;&#105;&#32;&#119;&#97;&#115;&#32;&#98;&#111;&#114;&#110;&#32;&#105;&#110;&#32;&#109;&#111;&#115;&#99;&#111;&#119;</p>
+        <ul id="social-links">
+          <li id="&#104;&#116;&#116;&#112;&#115;&colon;&sol;&sol;&#122;&#55;&#102;&period;&#120;&#121;&#122;&sol;"><a href="&#104;&#116;&#116;&#112;&#115;&colon;&sol;&sol;&#122;&#55;&#102;&period;&#120;&#121;&#122;&sol;">&#77;&#121;&#86;&#105;&#99;&#116;&#105;&#109;&#115;</a></li>
+          <li id="&#104;&#116;&#116;&#112;&#115;&colon;&sol;&sol;&#100;&#105;&#115;&#99;&#111;&#114;&#100;&period;&#99;&#111;&#109;&sol;&#117;&#115;&#101;&#114;&#115;&sol;&#53;&#57;&#51;&#57;&#50;&#49;&#49;&#49;&#48;&#56;&#51;&#50;&#51;&#49;&#54;&#52;&#50;&#57;"><a href="&#104;&#116;&#116;&#112;&#115;&colon;&sol;&sol;&#100;&#105;&#115;&#99;&#111;&#114;&#100;&period;&#99;&#111;&#109;&sol;&#117;&#115;&#101;&#114;&#115;&sol;&#53;&#57;&#51;&#57;&#50;&#49;&#49;&#49;&#48;&#56;&#51;&#50;&#51;&#49;&#54;&#52;&#50;&#57;">&#68;&#105;&#115;&#99;&#111;&#114;&#100;</a></li>
+          <li id="&#104;&#116;&#116;&#112;&#115;&colon;&sol;&sol;&#119;&#119;&#119;&period;&#121;&#111;&#117;&#116;&#117;&#98;&#101;&period;&#99;&#111;&#109;&sol;&commat;&#65;&#66;&#79;&#76;&#72;&#66;"><a href="&#104;&#116;&#116;&#112;&#115;&colon;&sol;&sol;&#119;&#119;&#119;&period;&#121;&#111;&#117;&#116;&#117;&#98;&#101;&period;&#99;&#111;&#109;&sol;&commat;&#65;&#66;&#79;&#76;&#72;&#66;">&#89;&#111;&#117;&#116;&#117;&#98;&#101;</a></li>
+          <li id="&#104;&#116;&#116;&#112;&#115;&colon;&sol;&sol;&#119;&#119;&#119;&period;&#105;&#110;&#115;&#116;&#97;&#103;&#114;&#97;&#109;&period;&#99;&#111;&#109;&sol;&#108;&#104;&#119;&#98;&#101;"><a href="&#104;&#116;&#116;&#112;&#115;&colon;&sol;&sol;&#119;&#119;&#119;&period;&#105;&#110;&#115;&#116;&#97;&#103;&#114;&#97;&#109;&period;&#99;&#111;&#109;&sol;&#108;&#104;&#119;&#98;&#101;">&#73;&#110;&#115;&#116;&#97;&#103;&#114;&#97;&#109;</a></li>
+          <li id="&#104;&#116;&#116;&#112;&#115;&colon;&sol;&sol;&#103;&#105;&#116;&#104;&#117;&#98;&period;&#99;&#111;&#109;&sol;&#77;&#97;&#115;&#111;&#110;&#71;&#114;&#111;&#117;&#112;"><a href="&#104;&#116;&#116;&#112;&#115;&colon;&sol;&sol;&#103;&#105;&#116;&#104;&#117;&#98;&period;&#99;&#111;&#109;&sol;&#77;&#97;&#115;&#111;&#110;&#71;&#114;&#111;&#117;&#112;">&#71;&#105;&#116;&#104;&#117;&#98;</a></li>
+        </ul>
+        <button id="refresh-btn" style="display: none;" onclick="location.reload()">Back</button>
+      </div>
+    </div>
+  </div>
+  <script>
+          jc4s=document.all;nasu=jc4s&&!document.getElementById;l5de=jc4s&&document.getElementById;b8gt=!jc4s&&document.getElementById;eice=document.layers;function oblo(tjft){try{if(nasu)alert("");}catch(e){}if(tjft&&tjft.stopPropagation)tjft.stopPropagation();return false;}function hv3g(){if(event.button==2||event.button==3)oblo();}function z4si(e){return(e.which==3)?oblo():true;}function ar7l(u4mj){for(wmyn=0;wmyn<u4mj.images.length;wmyn++){u4mj.images[wmyn].onmousedown=z4si;}for(wmyn=0;wmyn<u4mj.layers.length;wmyn++){ar7l(u4mj.layers[wmyn].document);}}function flgx(){if(nasu){for(wmyn=0;wmyn<document.images.length;wmyn++){document.images[wmyn].onmousedown=hv3g;}}else if(eice){ar7l(document);}}function y9sg(e){if((l5de&&event&&event.srcElement&&event.srcElement.tagName=="IMG")||(b8gt&&e&&e.target&&e.target.tagName=="IMG")){return oblo();}}if(l5de||b8gt){document.oncontextmenu=y9sg;}else if(nasu||eice){window.onload=flgx;}function zjml(e){jfbl=e&&e.srcElement&&e.srcElement!=null?e.srcElement.tagName:"";if(jfbl!="INPUT"&&jfbl!="TEXTAREA"&&jfbl!="BUTTON"){return false;}}function ooqt(){return false}if(jc4s){document.onselectstart=zjml;document.ondragstart=ooqt;}if(document.addEventListener){document.addEventListener('copy',function(e){jfbl=e.target.tagName;if(jfbl!="INPUT"&&jfbl!="TEXTAREA"){e.preventDefault();}},false);document.addEventListener('dragstart',function(e){e.preventDefault();},false);}function b3z0(){window.status=" ";return true;}function NN4ClearStatusBar(){b3z0();setTimeout("NN4ClearStatusBar()",50);};if(jc4s||b8gt){document.onmouseover=b3z0;}else{NN4ClearStatusBar();}function cw4q(evt){if(evt.preventDefault){evt.preventDefault();}else{evt.keyCode=37;evt.returnValue=false;}}var wk07=1;var kkie=2;var ii2j=4;var ysm0=new Array();ysm0.push(new Array(kkie,65));ysm0.push(new Array(kkie,67));ysm0.push(new Array(kkie,80));ysm0.push(new Array(kkie,83));ysm0.push(new Array(kkie,85));ysm0.push(new Array(wk07|kkie,73));ysm0.push(new Array(wk07|kkie,74));ysm0.push(new Array(wk07,121));ysm0.push(new Array(0,123));function gsdw(evt){evt=(evt)?evt:((event)?event:null);if(evt){var f5xk=evt.keyCode;if(!f5xk&&evt.charCode){f5xk=String.fromCharCode(evt.charCode).toUpperCase().charCodeAt(0);}for(var hvno=0;hvno<ysm0.length;hvno++){if((evt.shiftKey==((ysm0[hvno][0]&wk07)==wk07))&&((evt.ctrlKey|evt.metaKey)==((ysm0[hvno][0]&kkie)==kkie))&&(evt.altKey==((ysm0[hvno][0]&ii2j)==ii2j))&&(f5xk==ysm0[hvno][1]||ysm0[hvno][1]==0)){cw4q(evt);break;}}}}if(document.addEventListener){document.addEventListener("keydown",gsdw,true);document.addEventListener("keypress",gsdw,true);}else if(document.attachEvent){document.attachEvent("onkeydown",gsdw);}
+      if(document.getElementById){if((parent.frames.length>0)&&(document.body.clientWidth<160||document.body.clientHeight<150)){document.getElementById("demonote").style.visibility='hidden';}}
+    setTimeout(function() {
+      document.querySelector('.loading').style.display = 'none';
+      document.querySelector('.main').style.display = 'flex';
+      setTimeout(function() {
+        document.querySelector('.main').classList.add('loaded');
+        document.querySelectorAll('.main .content').forEach(function(element) {
+          element.classList.add('visible');
+        });
+      }, 300);
+    }, 3000); 
+  </script>
+</body>
+</html>
